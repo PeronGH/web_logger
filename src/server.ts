@@ -15,7 +15,7 @@ app.get("/record", async (ctx) => {
   await record({
     name: fn,
     return: ret,
-    args,
+    args: args ?? {},
   });
 
   return ctx.text("OK");
