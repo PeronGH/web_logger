@@ -10,6 +10,7 @@ export interface FunctionExecution {
   name: string;
   args: Record<string, string>;
   return?: string;
+  source?: string;
 }
 
 export async function record(data: FunctionExecution) {

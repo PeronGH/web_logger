@@ -1,3 +1,3 @@
-import { app } from "./src/server.ts";
+import { handler } from "./src/server.ts";
 
-Deno.serve(app.fetch);
+Deno.serve(handler);
