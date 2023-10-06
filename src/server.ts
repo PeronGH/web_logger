@@ -4,9 +4,9 @@ export const handler: Deno.ServeHandler = async (req, info) => {
   if (req.method !== "GET") {
     return new Response("Method not allowed", {
       status: 405,
-      headers: new Headers({
+      headers: {
         "Allow": "GET",
-      }),
+      },
     });
   }
 
@@ -29,6 +29,6 @@ export const handler: Deno.ServeHandler = async (req, info) => {
     case "/list":
       return Response.json(await list());
     default:
-      return new Response("Not found", { status: 404 });
+      return new Response("Not Found", { status: 404 });
   }
 };
